@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hub — Ferramentas AI</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <div class="page-corners">
+    <img src="Imagens/tech2.png" alt="" class="page-corner page-tl">
+    <img src="Imagens/tech3.png" alt="" class="page-corner page-tr">
+    <img src="Imagens/tech6.png" alt="" class="page-corner page-bl">
+    <img src="Imagens/tech9.png" alt="" class="page-corner page-br">
+  </div>
+  <header class="site-header">
+    <img src="Imagens/full_full 2026.png" alt="TUMO Coimbra" style="max-width:320px; height:auto  ; margin-bottom:10px;">
+    <h1>Hub de Ferramentas AI</h1>
+  </header>
+
+  <section class="quiz-card" id="quizSection">
+    <h2>O que estás à procura?</h2>
+    <form id="quizForm">
+      <div class="question">
+        <label>1. Já utilizas-te ferramentas AI antes?</label>
+        <div class="options">
+          <label><input type="radio" name="q1" value="1" required> Nunca</label>
+          <label><input type="radio" name="q1" value="2"> Algumas vezes</label>
+          <label><input type="radio" name="q1" value="3"> Frequentemente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>2. Qual nível de desafio que estás disposto a enfrentar?</label>
+        <div class="options">
+          <label><input type="radio" name="q2" value="1" required> Leve</label>
+          <label><input type="radio" name="q2" value="2"> Médio</label>
+          <label><input type="radio" name="q2" value="3"> Difícil</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>3. Em que área é que gostarias de melhorar?</label>
+        <div class="options">
+          <label><input type="radio" name="q3" value="1" required> Identificar conteúdo AI</label>
+          <label><input type="radio" name="q3" value="2"> Aprender Machine Learning básico</label>
+          <label><input type="radio" name="q3" value="3"> Combater desinformação</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Ver Recomendação</button>  
+      <button type="button" class="btn" id="skipQuiz" style="background: var(--muted); color: white;">Skip</button>
+    </form>
+    <p id="quizResult" style="margin-top:12px; font-weight:600;"></p>
+  </section>
+
+  <main class="grid" id="gamesSection" style="display:none;">
+    <article class="card">
+      <img src="https://sightengine.com/assets/img/examples/hero-analysis.webp" alt="Sightengine">
+      <h2>AI or Not</h2>
+      <p>Explore o fascinante mundo da IA! 
+        Assuma o papel de um detetive digital e descubra se imagens foram criadas por inteligência artificial ou por mãos humanas.</p>
+      <p>Tempo: 5 - 10 minutos</p>
+      <p>Linguagem: Ingles</p>
+      <a class="btn" href="https://sightengine.com/ai-or-not" target="_blank" rel="noopener noreferrer">Abrir</a>
+    </article>
+
+    <article class="card">
+      <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:417,cw:1072,ch:1072,q:80,w:1072/8LuETCsUmUn6hsHfNrQYh4.jpg" alt="Google AI Quests">
+      <h2>AI Quests</h2>
+      <p>Embarque em uma jornada interativa. 
+        Participe de missões envolventes e desvendam os mistérios da inteligência artificial e do Machine Learning.</p>
+      <p>Tempo: 20 - 30 minutos</p>
+      <p>Linguagem: Ingles</p>
+      <a class="btn" href="https://research.google/ai-quests/intl/en_gb" target="_blank" rel="noopener noreferrer">Abrir</a>
+    </article>
+
+    <article class="card">
+      <img src="https://www.getbadnews.com/wp-content/uploads/2021/09/LFq72phE.png" alt="GetBadNews">
+      <h2>GetBadNews</h2>
+      <p>Mergulhe no universo da desinformação: simule cenários de notícias falsas e desenvolva habilidades para identificar e combater a manipulação digital.</p>
+      <p>Tempo: 10 - 15 minutos</p>
+      <p>Linguagem: Português, Ingles</p>
+      <a class="btn" href="https://www.getbadnews.com/pt/" target="_blank" rel="noopener noreferrer">Abrir</a>
+    </article>
+  </main>
+
+  <script src="javascript.js"></script>
+    
+
+
+  <footer class="site-footer">
+    <div class="footer-buttons">
+      <a href="https://tumo.pt/" target="_blank" rel="noopener noreferrer"><img src="Imagens/botao_COIMBRA.png" alt="Facebook" class="footer-img"></a>
+      <a href="https://www.instagram.com/tumo.portugal?igsh=N2x0emhxaWI5aGdl" target="_blank" rel="noopener noreferrer"><img src="Imagens/botao_2026.png" alt="Instagram" class="footer-img"></a>
+      <a href="https://linktr.ee/TUMOportugal?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAQzVRJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafgdNnsqzo25jvMFf-97fFKUG5dFPODj3Obt3P6uMsmCBIVR3H53eavNxwBhw_aem_P_gPvWASZjkteTVSWfROaw" target="_blank" rel="noopener noreferrer"><img src="Imagens/botao_FEST.png" alt="Twitter" class="footer-img"></a>
+      <a href="https://www.instagram.com/tumo.portugal?igsh=N2x0emhxaWI5aGdl" target="_blank" rel="noopener noreferrer"><img src="Imagens/botao_T&A.png" alt="Website" class="footer-img"></a>
+    </div>
+    <small>&copy; 2026 TUMO Coimbra</small>
+  </footer>
+</body>
+
+    
+  </footer>
+</html>

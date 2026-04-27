@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('Fontes/NeuethingSans-RegularExpanded.otf') format('NeuethingSans-RegularExpanded'),
+         url('Fontes/NeuethingSans-SemiBoldExpanded.otf') format('NeuethingSans-SemiBoldExpanded');
+}
+
+
+
+
+:root{--accent:#2b6cb0;--muted:#6b7280;--bg:#f7fafc}
+*{box-sizing:border-box}
+
+body{margin: 5px;;
+    
+    background:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('Imagens/fundo.png') no-repeat center center fixed;
+    background-size:cover;
+    color:#152240;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    align-items:center; 
+    justify-content:flex-start;
+    font-family:'NeuethingSans-RegularExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+}
+
+.quiz-active body{justify-content:center}
+
+.site-footer.hidden{display:none}
+
+.site-header{max-width:700px;  
+    padding:30px 10px 30px;
+    text-align:center;
+    width: 100%;}
+
+.site-header h1{margin: 10px;
+    font-size:1.6rem}
+
+.site-header p{margin:0px 0 0;
+    color:var(--muted)}
+.quiz-card{
+    font-family:'NeuethingSans-RegularExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    background:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('Imagens/fundo.png') no-repeat center center fixed opacity(0.3);
+    border-radius:15px;
+    padding:10px;
+    width:min(1280px,96%);
+    margin:12px auto;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    text-align:left;
+    color:#102a43}
+
+.quiz-card h2{margin-top:0}
+
+.quiz-card form{
+    font-family:'NeuethingSans-RegularExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:12px}
+
+.quiz-card .question{
+    font-family:'NeuethingSans-SemiBoldExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding:8px 0;
+    border-bottom:1px solid rgba(16,42,67,0.12)}
+
+.quiz-card label{font-weight:700;
+    margin:0}
+
+.quiz-card .options{display:flex;
+    flex-wrap:wrap;
+    gap:10px}
+
+.quiz-card .options label{font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-right:12px;
+    background:rgba(43, 108, 176, 0.08);
+    border-radius:8px;
+    padding:6px 10px}
+
+.quiz-card input[type="radio"]{margin:0}
+
+.quiz-card .options{display:flex;
+    flex-wrap:wrap;
+    gap:10px}
+
+.quiz-card .options label{font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-right:12px}
+
+.quiz-card input[type="radio"]{margin:0}
+
+.grid{display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
+    width:min(1280px,76%);
+    padding:80px;
+    margin:0 auto;
+    justify-items:center}
+
+.card{
+    font-family:'NeuethingSans-RegularExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    background:rgb(255, 255, 255);
+    padding:54px;
+    border-radius:15px;
+    box-shadow:0 8px 22px rgba(20, 43, 87, 0.06);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    text-align:left;
+    position:relative;
+    overflow:hidden;
+    opacity:0;
+    transform: translateY(20px);
+    width:auto;
+    min-width:260px;
+}
+
+.grid.show-cards .card {
+    opacity:1;
+    transform: translateY(-10) scale(1);
+    font-family:'NeuethingSans-RegularExpanded',system-ui,-apple-system,Segoe UI,Roboto;    
+}
+
+.card {
+    
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    
+    transform: translateY(-50px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-corner{position:fixed;
+    width:32px;
+    height:32px;
+    object-fit:contain;
+    opacity:0.85;
+    z-index:10}
+
+.page-tl{top:8px; left:8px}
+.page-tr{top:8px; right:8px}
+.page-bl{bottom:8px; left:8px}
+.page-br{bottom:8px; right:8px}
+
+
+.card.highlight{border:3px solid #4a5ac1; box-shadow:0 0 0 3px rgba(66,153,225,0.3);}
+    
+.card h2{margin:0;
+    font-family: 'NeuethingSans-SemiBoldExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    font-size:1.4rem;
+    font-weight:700}
+
+.card p{margin:0;
+    color:var(--muted);
+    flex:1;
+    font-size:1.05rem;
+    font-weight:500}
+
+.card img{width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px}
+
+.btn{display:inline-block;
+    font-family:'NeuethingSans-SemiBoldExpanded',system-ui,-apple-system,Segoe UI,Roboto;
+    padding:10px 14px;
+    border: 5px;
+    background:var(--accent);
+    color:rgb(255, 255, 255);
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600}
+
+.site-footer{background:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('Imagens/degrade.png') no-repeat center center fixed;
+    color:white;
+    padding:20px;
+    width:100%;
+    text-align:center;
+    margin-top:auto}
+
+.footer-buttons{display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:10px}
+
+.footer-img{height:40px;
+    width:auto;
+    border-radius:6px;
+    transition:transform 0.3s ease}
+
+
+.footer-img:hover{transform:scale(1.1)}
+
+@media (max-width:480px){.site-header{padding:20px}.card{padding:14px}.footer-buttons{flex-direction:column; gap:10px}.footer-img{height:30px}}
